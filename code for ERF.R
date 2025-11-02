@@ -9,7 +9,7 @@ library(parallel)
 
 # 0. Load data ------------------------------------------------------------
 
-dta_newp <- readxl::read_xlsx("./dta.xlsx")
+load("ERFdata.RData")
 
 
 # 1. Function to estimate gamma distribution parameters (shape 'k' and scale 'theta') --------
@@ -455,4 +455,5 @@ dual_plot
 
 # Save the plot
 ggsave("./plot.tif", plot = dual_plot, width = 14, height = 9.8, dpi = 300)
+
 
